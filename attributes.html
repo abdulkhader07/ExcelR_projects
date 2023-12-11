@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>attributes</title>
+  <style>
+    .styled-element {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="myElement" class="styled-element">This is a styled element</div>
+
+  <script>
+    var myElement = document.getElementById('myElement');
+    myElement.style.backgroundColor = 'lightgreen';
+    myElement.style.fontSize = '18px';
+    myElement.style.border = '2px solid darkblue';
+  </script>
+</body>
+</html>

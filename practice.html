@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulating Child Elements</title>
+  <style>
+    #parentElement {
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    .child {
+      margin: 5px;
+      padding: 5px;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="parentElement">
+    <div class="child" id="existingChild">Existing Child Element</div>
+  </div>
+
+  <script>
+    // Inserting a new child element
+    const parentElement = document.getElementById("parentElement");
+
+    const newChild = document.createElement("div");
+    newChild.textContent = "New Child Element";
+    newChild.className = "child";
+
+    parentElement.appendChild(newChild);
+
+    // Replacing an existing child element
+    const existingChild = document.getElementById("existingChild");
+
+    const replacementChild = document.createElement("div");
+    replacementChild.textContent = "Replacement Child Element";
+    replacementChild.className = "child";
+
+    parentElement.replaceChild(replacementChild, existingChild);
+
+    // Removing a child element
+    const childToRemove = document.querySelector(".child");
+
+    if (childToRemove) {
+      parentElement.removeChild(childToRemove);
+    }
+  </script>
+
+</body>
+</html>
